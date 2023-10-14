@@ -1,0 +1,114 @@
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.flor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    position: relative;
+}
+
+.mensaje-animado {
+    font-size: 36px;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
+    padding: 0px; /* Espaciado interno para mejorar la legibilidad */
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(20px); /* Desplazado hacia abajo */
+    animation: entradaMensaje 1s ease forwards; /* Animación de entrada */
+}
+
+.petalos {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: girar 10s linear infinite; /* Solo los pétalos giran */
+}
+
+.petalo {
+    width: 40px;
+    height: 520px;
+    background-color: #FF1493;
+    border-radius: 50% 50% 0 0;
+    position: absolute;
+}
+
+.petalo:nth-child(1) {
+    transform: rotate(45deg);
+    background-color: #FF1493;
+    animation: aparecerYCambiarColor 10s ease infinite;
+}
+
+.petalo:nth-child(2) {
+    transform: rotate(90deg);
+    background-color: #FFD700;
+    animation: aparecerYCambiarColor 10s ease infinite 2s; /* Retraso de 2 segundos */
+}
+
+.petalo:nth-child(3) {
+    transform: rotate(135deg);
+    background-color: #FF4500;
+    animation: aparecerYCambiarColor 10s ease infinite 4s; /* Retraso de 4 segundos */
+}
+
+.petalo:nth-child(4) {
+    transform: rotate(180deg);
+    background-color: #FF6347;
+    animation: aparecerYCambiarColor 10s ease infinite 6s; /* Retraso de 6 segundos */
+}
+.card {
+    background-color: #fff; /* Fondo de la tarjeta */
+    border-radius: 10px; /* Bordes redondeados para la tarjeta */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra de la tarjeta */
+    padding: 20px; /* Espaciado interno de la tarjeta */
+    margin: 20px; 
+    max-width:400px;/* Margen exterior de la tarjeta */
+}
+
+@keyframes entradaMensaje {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes aparecerYCambiarColor {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        background-color: #FFFF00; /* Cambia de color al amarillo */
+    }
+}
