@@ -42,7 +42,8 @@ body {
 
 
 .card {
-    background-color: #fff; /* Fondo de la tarjeta */
+    background-color: #f4e9d0; /* Color de fondo amarillento */
+    font-family: cursive; /* Fondo de la tarjeta */
     border-radius: 10px; /* Bordes redondeados para la tarjeta */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra de la tarjeta */
     padding: 20px; /* Espaciado interno de la tarjeta */
