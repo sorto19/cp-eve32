@@ -9,16 +9,7 @@ body {
     overflow: hidden;
 }
 
-.flor {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 200px;
-    margin: 20px;
-    position: relative;
-}
+
 
 .mensaje-animado {
     font-size: 36px;
@@ -49,36 +40,14 @@ body {
     position: absolute;
 }
 
-.petalo:nth-child(1) {
-    transform: rotate(45deg);
-    background-color: #FF1493;
-    animation: aparecerYCambiarColor 10s ease infinite;
-}
 
-.petalo:nth-child(2) {
-    transform: rotate(90deg);
-    background-color: #FFD700;
-    animation: aparecerYCambiarColor 10s ease infinite 2s; /* Retraso de 2 segundos */
-}
-
-.petalo:nth-child(3) {
-    transform: rotate(135deg);
-    background-color: #FF4500;
-    animation: aparecerYCambiarColor 10s ease infinite 4s; /* Retraso de 4 segundos */
-}
-
-.petalo:nth-child(4) {
-    transform: rotate(180deg);
-    background-color: #FF6347;
-    animation: aparecerYCambiarColor 10s ease infinite 6s; /* Retraso de 6 segundos */
-}
 .card {
     background-color: #fff; /* Fondo de la tarjeta */
     border-radius: 10px; /* Bordes redondeados para la tarjeta */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra de la tarjeta */
     padding: 20px; /* Espaciado interno de la tarjeta */
     margin: 20px; 
-    max-width:400px;/* Margen exterior de la tarjeta */
+    max-width:800px;/* Margen exterior de la tarjeta */
 }
 
 @keyframes entradaMensaje {
